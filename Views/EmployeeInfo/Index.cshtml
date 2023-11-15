@@ -1,0 +1,35 @@
+﻿@model List<EmployeeOperations.Models.EmployeeInfo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>FirstDay</th>
+            <th>Meal Allow Threshold</th>
+            <th>Guarantee Type</th>
+            <th># of Wks</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var data in Model)
+        {
+            <tr>
+                <td>@data.ID</td>
+                <td>@data.Name</td>
+                <td>@data.Description</td>
+                <td>@data.FirstDay</td>
+                <td>@data.MealAllowThreshold</td>
+                <td>@data.GuaranteeType</td>
+                <td>@data.OfWks</td>
+                <td>@data.Status</td>
+            </tr>
+        }
+    </tbody>
+</table>
